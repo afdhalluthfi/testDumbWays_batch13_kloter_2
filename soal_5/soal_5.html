@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal_5</title>
+    <script language="javascript" type="text/javascript">
+        function random_all() {
+            var campur = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+            var panjang = 9;
+            var random_all = '';
+            for (var i=0; i<panjang; i++) {
+                var hasil = Math.floor(Math.random() * campur.length);
+                random_all += campur.substring(hasil,hasil+1);
+            }
+            document.random_form.disini.value = random_all;
+        }
+    </script>
+</head>
+<body>
+    
+
+
+    <form name="random_form">
+        <input type="button" value="Generate Serial" onClick="random_all();">
+        <input type="text" name="disini" value="">
+    </form>
+</body>
+</html>
